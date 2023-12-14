@@ -47,18 +47,59 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <form
-            class="form rounded-3 py-1 px-3 d-flex justify-content-center align-items-center"
-            role="search"
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="border-0 bg-transparent modal_btn"
+            data-bs-toggle="modal"
+            data-bs-target="#searchBar"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-              class="form-control me-2 shadow-none border-0 bg-transparent"
-              type="search"
-              placeholder="News Categories"
-              aria-label="Search"
-            />
-          </form>
+          </button>
+
+          <!-- Search Modal -->
+          <div
+            class="modal fade"
+            id="searchBar"
+            tabindex="-1"
+            aria-labelledby="searchBarLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-0 border-0 bg-transparent">
+                <div class="modal-body p-0 border-0 bg-transparent">
+                  <div class="search_area">
+                    <form class="form" role="search">
+                      <input
+                        class="form_input"
+                        type="search"
+                        placeholder="Search News Categories"
+                        aria-label="Search"
+                      />
+                    </form>
+
+                    <div class="seracj_list">
+                      <ul>
+                        <li><a href="#">Not recent serach</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <!-- <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button> -->
+                  <button type="button" class="butn">Search Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -79,7 +120,7 @@
                   />
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown ">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -96,7 +137,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" href="./profile.html"
                       ><div
                         class="d-flex gap-3 justify-content-start align-items-center"
                       >
@@ -114,7 +155,8 @@
                           <h6 class="user_name">Hello User</h6>
                           <h6 class="user_id">@hellouser</h6>
                         </div>
-                      </div></a>
+                      </div></a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li>
@@ -144,8 +186,8 @@
             <div
               class="side_profie border-bottom border-1 border-secondary-subtle pb-3"
             >
-              <div
-                class="d-flex gap-3 justify-content-start align-items-center"
+               <a href="./profile.html"
+                class="d-flex gap-3 justify-content-start align-items-center text-decoration-none"
               >
                 <img
                   src="./assets/images/profiles/profile2.jpg"
@@ -156,7 +198,7 @@
                   <h6 class="user_name">Hello User</h6>
                   <h6 class="user_id">@hellouser</h6>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- -------------------  -->
             <!-- -------------------  -->
@@ -171,21 +213,21 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="./peoples.html" class="side_nav_link">
+                  <a href="./users.html" class="side_nav_link">
                     <i class="fa-solid fa-users"></i>
-                    <span>People</span>
+                    <span>Users</span>
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
+                  <a href="./event.html" class="side_nav_link">
                     <i class="fa-solid fa-medal"></i>
                     <span>Events</span>
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
+                  <a href="./tables.html" class="side_nav_link">
                     <i class="fa-regular fa-images"></i>
-                    <span>Pages</span>
+                    <span>Tables</span>
                   </a>
                 </li>
                 <li class="side_list_item">
@@ -201,8 +243,8 @@
                   </a>
                 </li>
                 <li class="side_list_item">
-                  <a href="#" class="side_nav_link">
-                    <i class="fa-regular fa-bookmark"></i>
+                  <a href="./saved.html" class="side_nav_link">
+                    <i class="fa-solid fa-bookmark"></i>
                     <span>Saved</span>
                   </a>
                 </li>
@@ -1356,7 +1398,7 @@
                         <ul class="dropdown-menu">
                           <li>
                             <a class="dropdown-item" href="#">
-                              <i class="fa-regular fa-bookmark"></i>
+                              <i class="fa-solid fa-bookmark"></i>
                               <span>Pasr Save</span>
                             </a>
                           </li>
